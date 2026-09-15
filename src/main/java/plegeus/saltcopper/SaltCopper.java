@@ -5,6 +5,9 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -17,6 +20,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import plegeus.saltcopper.biome.DeferredModifier;
 import plegeus.saltcopper.biome.RegisteredModifiers;
+import plegeus.saltcopper.config.Config;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(SaltCopper.MODID)
@@ -26,6 +30,15 @@ public class SaltCopper {
     public static final String MODID = "saltcopper";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+
+    /**
+     * Set at ServerStartEvent for Level.OVERWORLD.
+     */
+    public static ServerLevel level;
+    /**
+     * See SaltCopper.level.
+     */
+    public static RegistryAccess registries;
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
@@ -55,7 +68,6 @@ public class SaltCopper {
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
         
     }
 

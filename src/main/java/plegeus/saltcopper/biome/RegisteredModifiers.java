@@ -1,5 +1,7 @@
 package plegeus.saltcopper.biome;
 
+import org.openjdk.nashorn.internal.runtime.regexp.joni.constants.RegexState;
+
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -23,7 +25,8 @@ public class RegisteredModifiers {
                 ), 
                 new VanillaOresModifier(
                     bootstrap.lookup(Registries.BIOME)
-                        .getOrThrow(Tags.Biomes.IS_OVERWORLD)
+                        .getOrThrow(Tags.Biomes.IS_OVERWORLD),
+                    bootstrap.lookup(Registries.PLACED_FEATURE)
                 )
             );
         });

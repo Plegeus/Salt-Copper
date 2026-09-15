@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import com.mojang.serialization.MapCodec;
-
 import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biome.ClimateSettings;
@@ -13,8 +13,8 @@ import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.ModifiableBiomeInfo.BiomeInfo.Builder;
-import plegeus.saltcopper.Config;
-import plegeus.saltcopper.Ore;
+import plegeus.saltcopper.config.Config;
+import plegeus.saltcopper.config.Ore;
 
 /**
  * VanillaOresModifier
@@ -22,7 +22,7 @@ import plegeus.saltcopper.Ore;
  * A list of biomes to apply this modifer to.
  * 
  */
-public record VanillaOresModifier(HolderSet<Biome> biomes) implements BiomeModifier {
+public record VanillaOresModifier(HolderSet<Biome> biomes, HolderGetter<PlacedFeature> registry) implements BiomeModifier {
 
     @Override
     public MapCodec<? extends BiomeModifier> codec() {
@@ -32,7 +32,7 @@ public record VanillaOresModifier(HolderSet<Biome> biomes) implements BiomeModif
     @Override
     public void modify(Holder<Biome> biome, Phase phase, Builder builder) {
         if (phase == Phase.AFTER_EVERYTHING) {
-            
+
             // Removes all features from the given step, so no ores!
             List<Holder<PlacedFeature>> features = builder.getGenerationSettings().getFeatures(Decoration.UNDERGROUND_ORES);
             if (!Config.KEEP_VANILLA_ORES.getAsBoolean()) {
@@ -49,7 +49,9 @@ public record VanillaOresModifier(HolderSet<Biome> biomes) implements BiomeModif
             // Based on temperature and downfall, predict geology.
             for (Ore ore : Config.ORES.ORES) {
                 if (ore.matchesClimate(climate)) {
-                    
+                    for (Holder<PlacedFeature> f : ore.getFeatures(registry)) {
+                        features.add(f);
+                    }
                 }
             }
 

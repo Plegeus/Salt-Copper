@@ -1,4 +1,4 @@
-package plegeus.saltcopper;
+package plegeus.saltcopper.config;
 
 
 import net.neoforged.neoforge.common.ModConfigSpec;
@@ -12,7 +12,7 @@ public class Config {
         .comment("If false removes all vanilla ore generation.")
         .define("keepVanillaOres", false);
     
-    static final ModConfigSpec SPEC = BUILDER.build();
+    public static final ModConfigSpec SPEC = BUILDER.build();
 
 
     public static final OreConfig ORES = new OreConfig();
