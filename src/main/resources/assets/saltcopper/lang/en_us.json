@@ -1,0 +1,13 @@
+{
+  "itemGroup.saltcopper": "Example Mod Tab",
+  "block.saltcopper.example_block": "Example Block",
+  "item.saltcopper.example_item": "Example Item",
+
+  "saltcopper.configuration.title": "Salt & Copper Configs",
+  "saltcopper.configuration.section.saltcopper.common.toml": "Salt & Copper Configs",
+  "saltcopper.configuration.section.saltcopper.common.toml.title": "Salt & Copper Configs",
+  "saltcopper.configuration.items": "Item List",
+  "saltcopper.configuration.logDirtBlock": "Log Dirt Block",
+  "saltcopper.configuration.magicNumberIntroduction": "Magic Number Text",
+  "saltcopper.configuration.magicNumber": "Magic Number"
+}

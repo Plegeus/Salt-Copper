@@ -1,0 +1,21 @@
+[15Sep2026 11:24:42.666] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatadev, --assetIndex, 17, --assetsDir, C:\\Users\\Timoty\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.44, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.250, --fml.neoFormVersion, 20240808.144430, --mod, saltcopper, --all, --output, C:\\Users\\Timoty\\Documents\\Plegeus\\Minecraft\\Mods\\saltcopper-template-1.21.1\\src\\generated\\resources, --existing, C:\\Users\\Timoty\\Documents\\Plegeus\\Minecraft\\Mods\\saltcopper-template-1.21.1\\src\\main\\resources]
+[15Sep2026 11:24:42.670] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.12.1+1-LTS
+[15Sep2026 11:24:42.671] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.12.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[15Sep2026 11:24:42.878] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatadev
+[15Sep2026 11:24:42.958] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Timoty/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[15Sep2026 11:24:43.268] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[15Sep2026 11:24:43.270] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.250 (neoforge)
+		Salt & Copper 1.0.0 (saltcopper)
+[15Sep2026 11:24:43.956] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatadev' with arguments [--gameDir, ., --assetsDir, C:\Users\Timoty\.gradle\caches\neoformruntime\assets, --assetIndex, 17, --mod, saltcopper, --all, --output, C:\\Users\\Timoty\\Documents\\Plegeus\\Minecraft\\Mods\\saltcopper-template-1.21.1\\src\\generated\\resources, --existing, C:\\Users\\Timoty\\Documents\\Plegeus\\Minecraft\\Mods\\saltcopper-template-1.21.1\\src\\main\\resources]
+[15Sep2026 11:24:44.776] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [saltcopper]
+[15Sep2026 11:24:44.795] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[15Sep2026 11:24:49.648] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.250, for MC 1.21.1
+[15Sep2026 11:24:50.019] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Timoty/Documents/Plegeus/Minecraft/Mods/saltcopper-template-1.21.1/build/moddev/artifacts/neoforge-21.1.250.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[15Sep2026 11:24:50.020] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Timoty/Documents/Plegeus/Minecraft/Mods/saltcopper-template-1.21.1/build/moddev/artifacts/neoforge-21.1.250.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[15Sep2026 11:24:50.125] [main/INFO] [plegeus.saltcopper.SaltCopper/]: HELLO FROM ON GATHER DATA
+[15Sep2026 11:24:50.304] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries

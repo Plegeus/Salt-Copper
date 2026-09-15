@@ -1,0 +1,4 @@
+{
+  "type": "saltcopper:override_vanilla_ores",
+  "biomes": "#c:is_overworld"
+}
